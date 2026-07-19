@@ -1,0 +1,99 @@
+<mxfile host="Electron">
+  <diagram id="flow1" name="Page-1">
+    <mxGraphModel dx="1414" dy="847" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2200" pageHeight="1200" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="start" parent="1" style="ellipse;whiteSpace=wrap;html=1;" value="開始" vertex="1">
+          <mxGeometry height="50" width="90" x="30" y="225" as="geometry" />
+        </mxCell>
+        <mxCell id="init" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="預設參數" vertex="1">
+          <mxGeometry height="60" width="120" x="180" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="iter" parent="1" style="rhombus;whiteSpace=wrap;html=1;" value="是否到&#xa;迭代上限" vertex="1">
+          <mxGeometry height="80" width="100" x="370" y="210" as="geometry" />
+        </mxCell>
+        <mxCell id="extract" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="結果提取" vertex="1">
+          <mxGeometry height="60" width="120" x="360" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="end" parent="1" style="ellipse;whiteSpace=wrap;html=1;" value="結束" vertex="1">
+          <mxGeometry height="50" width="90" x="560" y="105" as="geometry" />
+        </mxCell>
+        <mxCell id="spawn" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="產生螞蟻" vertex="1">
+          <mxGeometry height="60" width="120" x="360" y="360" as="geometry" />
+        </mxCell>
+        <mxCell id="goal" parent="1" style="rhombus;whiteSpace=wrap;html=1;" value="是否&#xa;到目的" vertex="1">
+          <mxGeometry height="80" width="100" x="560" y="350" as="geometry" />
+        </mxCell>
+        <mxCell id="tabu" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="更新禁止&#xa;移動表" vertex="1">
+          <mxGeometry height="60" width="120" x="720" y="360" as="geometry" />
+        </mxCell>
+        <mxCell id="X4NCDQ5jjQwMPmyWzybF-3" edge="1" parent="1" source="cost" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="important">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="cost" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="更新路徑&#xa;費洛蒙" vertex="1">
+          <mxGeometry height="60" width="120" x="920" y="360" as="geometry" />
+        </mxCell>
+        <mxCell id="X4NCDQ5jjQwMPmyWzybF-8" edge="1" parent="1" source="global" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="iter">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="global" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="全局更新" vertex="1">
+          <mxGeometry height="60" width="120" x="550" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="X4NCDQ5jjQwMPmyWzybF-11" edge="1" parent="1" source="important" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="global">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="X4NCDQ5jjQwMPmyWzybF-12" connectable="0" parent="X4NCDQ5jjQwMPmyWzybF-11" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="是" vertex="1">
+          <mxGeometry relative="1" x="-0.0607" y="-2" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="X4NCDQ5jjQwMPmyWzybF-13" edge="1" parent="1" source="important" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="tabu">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1160" y="250" />
+              <mxPoint x="1160" y="480" />
+              <mxPoint x="780" y="480" />
+            </Array>
+            <mxPoint x="1160" y="560" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="X4NCDQ5jjQwMPmyWzybF-14" connectable="0" parent="X4NCDQ5jjQwMPmyWzybF-13" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="否" vertex="1">
+          <mxGeometry relative="1" x="-0.7886" y="-2" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="important" parent="1" style="rhombus;whiteSpace=wrap;html=1;" value="是否走到&#xa;重要點" vertex="1">
+          <mxGeometry height="80" width="100" x="930" y="210" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" edge="1" parent="1" source="start" target="init">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" edge="1" parent="1" source="init" target="iter">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e3" edge="1" parent="1" source="iter" target="extract" value="是">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e4" edge="1" parent="1" source="extract" target="end">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e5" edge="1" parent="1" source="iter" target="spawn" value="否">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e6" edge="1" parent="1" source="spawn" target="goal">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e7" edge="1" parent="1" source="goal" target="tabu" value="否">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e8" edge="1" parent="1" source="tabu" target="cost">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e9" edge="1" parent="1" source="goal" target="global" value="是">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
